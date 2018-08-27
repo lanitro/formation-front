@@ -54,10 +54,81 @@ var membres = [
     { 'pseudo': 'Emilio', 'age': 18, 'email': 'milio@hl-media.fr', 'mdp': 'milioDu62' }
 ];
 
-var pseudo = document.getElementById('pseudo');
-var age = document.getElementById('age');
-var ageError = document.getElementsByClassName('ageError');
+//--recuperation des differents élements;
 
+const pseudo = document.getElementById('pseudo');
+const age =document.getElementById('age');
+const email = document.getElementById('email');
+const mdp = document.getElementById('mdp');
+const submit = document.getElementById('submit');
+const Bienvenue = document.getElementById('Bienvenue');
+const Inscription = document.getElementById('InscriptionForm');
 
+const pseudoError = document.getElementsByClassName('pseudoError')[0];
+const ageError = document.getElementsByClassName('ageError')[0];
 
+//--ETAPE 1 & 3
 
+pseudo.addEventListener('input', function () {
+    //console.log(pseudo.value);
+    for (let i = 0 ; i <membres.length; i++){
+        //console.log(membres[i]);
+        if (pseudo.value === membres[i].pseudo){
+
+            pseudoError.style.display = "block";
+            submit.disabled = true;
+            Bienvenue.textContent = '';
+
+            break;
+        } else {
+            pseudoError.style.display = "none";
+            submit.disabled = false;
+            Bienvenue.textContent = 'bienvenue' + pseudo.value;
+                }
+    }
+});
+//--etape 2
+const majoriteLegale = 18;
+age.addEventListener('change', function (){
+ 
+    if (age.value >= majoriteLegale) {
+     ageError.style.display = 'none';
+     submit.disabled = false;
+
+    } else {
+       ageError.style.display ="block";
+       submit.disabled = true;
+    }
+});
+
+//--etape 4
+
+    InscriptionForm.addEventListener('sumit', function (e){
+       //--Stopper la redirection HTTP
+        e.preventDefault();
+
+        const membre = {
+            'pseudo': pseudo.value,
+            'age': age.value,
+            'email': email.value,
+            'mdp': mdp.value  
+        };
+       
+       membres.push(membre);
+        console.log(membres);
+
+        const p = document.createElement ('p');
+        p.innerHTML = "Merci" + pseudo.value + "! <strong> tu es maintenant inscrit.</strong><br><br><u>Voici la liste de nos membres :</u>";
+        document.body.appendChild(p);
+
+        //--generer la liste des membres
+        const ul = document.createElement('ul');
+        for (let i = 0; i <membres.lenght ; i++){
+            
+            let li = document.createElement('li');
+            li.textContent = membres[i].pseudo + ":" + membres[i].age + "ans";
+            ul.appendChild(li);
+        }
+       document.body.appendChild(ul);
+
+    });
