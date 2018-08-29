@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>les selecteurs jQuery</title>
+</head>
+
+<body>
+    <p>ceci est un paragraphe HTML,
+        <br>
+        <span>dans mon paragraphe, un span se profile a l'horizon</span>
+    </p>
+
+    <p>serait-ce
+        <a href="https://www.google.fr">un lien</a>a venir par dela les montagne</p>
+
+    <div id="monElementID">
+        <p>je serai bien surpris d'une telle chose...</p>
+    </div>
+
+    <div class="MaClasse">
+        <p>a vrai dire : Aucunement, je l'ai
+            <span>toujours connu ainsi</span>
+        </p>
+    </div>
+
+    <nav id="menu">
+        <h3>Le menu est servi</h3>
+        <ul>
+            <li>
+                <a href="#">caviar au fromage chevre</a>
+            </li>
+            <li>
+                <a href="#">etoile de mer au pesto</a>
+            </li>
+            <li>
+                <a href="#">saumon a la moutarde</a>
+            </li>
+            <li>
+                <a href="#">rimbambelle de cochon a l'ananas</a>
+            </li>
+        </ul>
+    </nav>
+
+    <form action="home.php" method="post"></form>
+    <!--
+    EN HTML 
+    <balise>
+    <balise></balise>
+    <balise attribut =""></balise>
+
+    en CSS
+    selecteur Css { /* => balise, classe, #id, attribut... */
+        proprieté : valeur;
+    }
+    en JS 
+    document.getElementByTagName('balise');
+
+-->
+
+    <!--integration jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+
+    <!--integration de notre fichier JS-->
+    <script src="assets/02.js"></script>
+</body>
+
+</html>

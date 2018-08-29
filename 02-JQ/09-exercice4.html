@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercice4</title>
+    
+</head>
+<body>
+<!-- CONSIGNE : Avec l'aide de jQuery, vous devrez :
+
+    1. A l'aide d'une API de Géolocalisation, vous affichez dans un paragraphe du formulaire l'adresse IP ainsi que la Ville et/ou Code Postal de l'utilisateur connecté.
+
+    Utilisation de JSONP : geoip.nekudo.com || ipapi.co
+
+    -->
+
+    <script>
+        function foo(data) {
+            document.write("City: ", data.city);
+            document.write("Country: ", data.country.name);
+            document.write("Latitude: ", data.location.latitude);
+            document.write("Longitude: ", data.location.longitude);
+            document.write("ip: ",data.ip);
+        }
+    </script>
+    <script src="http://geoip.nekudo.com/api?callback=foo"></script>
+
+    <script src="assets/js/09.js"></script>
+</body>
+</html>
