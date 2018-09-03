@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>revision</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        </head>
+        <!-- Avec BS (bootstrap) on peut ajouter des marges avec m et des des paddings avec p
+                en ajoutant après le m ou le p :
+                    - t (top)
+                    - b (bottom)
+                    - l (left - gauche)
+                    - r (right - droite)
+                    - x (droite & gauche)
+                    - y (top & bottom)
+                    - ou pas de lettre pour un réglage identique sur tous les côtés
+                Après un tiret (-) on indique une taille de 0 à 5
+                -->
+         
+<body>
+
+    
+<div class="container">
+    <h1>Revision BS</h1>
+    <hr />
+    <h2>Mobile first</h2>
+
+    <div class="row"> <!--div class row pour pouvoir la rangée-->
+        <!--div.rouge.col-md-9.order-4-->
+        <div class="rouge col-md-9 order-md-4">
+            <p>Rouge -codé en 1er
+                <br> au dessus de 575px (md => ecran taille medium) il prend 9
+                colonnes et il se positionne sur la grille en colonne n°4
+                <br> en dessous de 575px il repasse en 1er =>
+            </p>
+        
+    </div>
+    <!--div.bleu.col-md-3.order-md-1 -->
+    <div class="bleu col-md-3 order-md-1">
+        <p> BLEU - codé en 2eme <br>
+            au dessus de 575px il occupe 3 colonnes et se positionne en colonne n°1 <br>
+            en dessous de 575px il repasse en 2eme
+
+        </p>
+         
+</div>
+</div> <!-- ./.row-->
+
+<!--div.row>div.col-md-4.order-md-8+div.col-md-4-order-md-1+div.col-md-4.order-md-4|c -->
+<div class="row">
+    <div class="col-md-4 order-md-8">
+        <!--div.card>div.card-body+h4.card-title+p.card-text+a.btn-success-->
+         <div class="card">
+             <div class="card-body">
+             <h4 class="card-title">HTML ligne 59</h4>
+             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis illo fugiat quod voluptatem corporis, optio velit nam similique, pariatur tempora beatae ducimus ratione temporibus illum. Quia et alias neque a.</p>
+             <a href="#" class="btn btn-success">Aller ici</a>
+            </div>
+         </div>
+    </div>
+    <div class="col-md-4 order-md-1">
+        <div class="card border-info mb-3">
+            <div class="card-header">HTML ligne 67</div>
+            <!-- /.card-header -->
+            <div class="card-body text-info">
+                <h4 class="card-title">Card title</h4>
+                <!-- /.card-title -->
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione distinctio modi porro fugiat quibusdam laborum delectus quasi iste dolorum, quas pariatur quos quae alias id facilis consectetur deleniti eum? Fugiat!</p>
+                <!-- /.card-text -->
+            </div>
+            <!-- /.card-body text-info -->
+        </div>
+        <!-- /.card border-info mb-3 -->
+    </div>
+    <div class="col-md-4 order-md-4">
+        <!--div.card>img.card-img-top+div.card-body>p.card-text-->
+         <div class="card">
+             <img src="img/bape.png" alt="" class="card-img-top">
+             <div class="card-body">
+                 <p class="card-text">HTML ligne 84</p>
+             </div>
+         </div>
+    </div>
+</div>
+ <div class="row">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                
+                    <img src="img/bape.png" alt="bape">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Bape</h5>
+                        <p>japan streetwear</p>
+                    </div>
+                
+            </div>
+            <div class="carousel-item">
+            
+                    <img src="img/bape1.jpg" alt="bape1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Bape</h5>
+                        <p>world wide propaganda</p>
+                    </div>
+                
+            </div>
+            <div class="carousel-item">
+                
+                    <img src="img/bape2.jpg" alt="bape2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Bape</h5>
+                        <p>streetwear</p>
+                    </div>
+                
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+ </div>
+
+</div>
+
+</div> <!--FIN DU CONTENEUR-->
+</body>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+</html>
