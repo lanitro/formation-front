@@ -1,0 +1,18 @@
+<form  #f="ngForm class="form-inline">
+  <input type="search"
+         required
+         name="name"
+         #name="ngModel"
+         [(ngModel)]="task.name"
+         class="form-control mr-2"
+         placeholder="ajouter une tache..."
+
+
+  >
+  <button class="btn"
+          type="submit>
+          <span>+</span>
+          Ajouter
+
+" </button>
+</form>
